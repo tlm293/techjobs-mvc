@@ -30,6 +30,7 @@
     <div th:fragment="jobs">
         <p th:text="${jobs.size()} + ' Results'"></p>
         <table class="job-listing" th:each="job : ${jobs}">
+
             <tr th:each="key : ${job.keySet()}">
 
                 <td th:text="${#strings.capitalizeWords(key)}"></td>
